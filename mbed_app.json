@@ -1,0 +1,54 @@
+{
+    "config": {
+        "aws-endpoint": {
+            "help": "Endpoint URL",
+            "value": "\"thisIsYourEndpoint.iot.eu-west-2.amazonaws.com\""
+        },
+        "toNode": {
+            "help": "Topic to subscribe & publish to",
+            "value": "\"toNode\""
+        },
+        "fromNode": {
+            "help": "Topic to subscribe & publish to",
+            "value": "\"fromNode\""
+        },
+        "aws-client-identifier": {
+            "help": "Unique identifier for the thing",
+            "value": "\"IoTnode\""
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "mbed-trace.enable": true,
+            "mbed-trace.max-level": "TRACE_LEVEL_INFO",
+            "platform.error-filename-capture-enabled": true,
+            "platform.stdio-convert-newlines": true,
+            "platform.stdio-baud-rate": 115200,
+            "aws-client.shadow": false,
+            "aws-client.aws-sdk-trace": false
+        },
+        "DISCO_L475VG_IOT01A": {
+            "target.network-default-interface-type": "WIFI",
+            "nsapi.default-wifi-security": "WPA_WPA2",
+            "nsapi.default-wifi-ssid": "\"WIFI_SSID\"",
+            "nsapi.default-wifi-password": "\"WIFI_PASSWD\""
+        },
+        "EP_AGORA": {
+            "platform.stdio-buffered-serial"            : true,
+            "platform.stdio-flush-at-exit"              : true,
+            "drivers.uart-serial-rxbuf-size"            : 1024,
+            "drivers.uart-serial-txbuf-size"            : 1024,
+            "lwip.ipv4-enabled"                         : true,
+            "lwip.ipv6-enabled"                         : true,
+            "lwip.ppp-enabled"                          : true,
+            "lwip.tcp-enabled"                          : true,
+            "lwip.ethernet-enabled"                     : false,
+            "lwip.mem-size"                             : 22000,
+            "lwip.tcpip-thread-stacksize"               : 2000,
+            "nsapi.dns-response-wait-time"              : 30000,
+            "nsapi.default-cellular-apn"                : "\"phone\"",
+            "lwip.use-mbed-trace"                       : true,
+            "lwip.debug-enabled"                        : false
+        }
+    }
+}

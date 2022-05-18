@@ -1,0 +1,49 @@
+{
+    "name": "aws-client",
+    "config": {
+        "aws-sdk-trace": {
+            "help": "Enable AWS SDK tracing",
+            "value": false
+        },
+        "socket-timeout": {
+            "help": "MQTT socket timeout",
+            "value": "5s"
+        },
+        "keepalive": {
+            "help": "MQTT keep-alive time",
+            "value": "60s"
+        },
+        "port": {
+            "help": "MQTT port",
+            "value": 8883
+        },
+        "clean-session": {
+            "help": "MQTT clean session",
+            "value": true
+        },
+        "buffer-size": {
+            "help": "MQTT buffer size",
+            "value": 1024
+        },
+        "shadow": {
+            "help": "Build the AWS IoT Device Shadow service support",
+            "value": false
+        },
+        "shadow-topic-max-size": {
+            "help": "Maximum length of the shadow topic",
+            "value": 256
+        },
+        "shadow-get-response-max-size": {
+            "help": "Maximum length of the shadow get response",
+            "value": 1024
+        },
+        "json-query-max-size": {
+            "help": "Maximum length of a JSON query",
+            "value": 256
+        },
+        "shadow-update-document-max-size": {
+            "help": "Maximum length of a shadow update document",
+            "value": 1024
+        }
+    }
+}
